@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-//#import "AXClock.h"
-#import "AXLocalClockView.h"
-#import "AXTwoCitiesClockView.h"
+#import "AXClockView.h"
 
 
 @interface ViewController ()

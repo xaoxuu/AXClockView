@@ -108,3 +108,7 @@ typedef NS_ENUM(NSUInteger, AXSecondHandMoveStyle) {
 
 
 @end
+
+#import "AXLocalClockView.h"
+#import "AXTwoCitiesClockView.h"
+
