@@ -18,27 +18,27 @@
  创建一个模拟时钟
  
  @param frame        frame
- @param dialPalte    表盘图片
+ @param dialPlate    表盘图片
  @param centerCircle 中心圈
  @param hourHand     时针
  @param minuteHand   分针
  @param secondHand   秒针
  @return 时钟实例
  */
-+ (instancetype)clockWithFrame:(CGRect)frame dialPalte:(NSString *)dialPalte centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand minuteHand:(NSString *)minuteHand secondHand:(NSString *)secondHand;
++ (instancetype)clockWithFrame:(CGRect)frame dialPlate:(NSString *)dialPlate centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand minuteHand:(NSString *)minuteHand secondHand:(NSString *)secondHand;
 
 /**
  创建一个模拟时钟
  
  @param frame        frame
- @param dialPalte    表盘图片
+ @param dialPlate    表盘图片
  @param centerCircle 中心圈
  @param hourHand     时针
  @param minuteHand   分针
  @param secondHand   秒针
  @return 时钟实例
  */
-- (instancetype)initWithFrame:(CGRect)frame dialPalte:(NSString *)dialPalte centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand minuteHand:(NSString *)minuteHand secondHand:(NSString *)secondHand;
+- (instancetype)initWithFrame:(CGRect)frame dialPlate:(NSString *)dialPlate centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand minuteHand:(NSString *)minuteHand secondHand:(NSString *)secondHand;
 
 
 

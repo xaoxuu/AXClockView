@@ -27,19 +27,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    AXLocalClockView *clock = [AXLocalClockView clockWithFrame:CGRectMake(50, 100, 300, 300) dialPalte:@"palte" centerCircle:@"clock_center_i6" hourHand:@"hour_hand_i6" minuteHand:@"minute_hand_i6" secondHand:@"second_hand_i6"];
+    AXLocalClockView *clock = [AXLocalClockView clockWithFrame:CGRectMake(50, 100, 300, 300) dialPlate:@"plate" centerCircle:@"clock_center_i6" hourHand:@"hour_hand_i6" minuteHand:@"minute_hand_i6" secondHand:@"second_hand_i6"];
     [self.view addSubview:clock];
     clock.center = CGPointMake(0.5*self.view.frame.size.width, 0.5*self.view.frame.size.height);
     
     self.clockView = clock;
     
     
-    AXTwoCitiesClockView *clock2 = [AXTwoCitiesClockView clockWithFrame:CGRectMake(50, 100, 300, 300) dialPalte:@"palte" centerCircle:@"clock_center_i6"  hourHand:@"hour_hand_i6" otherCityHour:@"second_hand_i6"];
+    AXTwoCitiesClockView *clock2 = [AXTwoCitiesClockView clockWithFrame:CGRectMake(50, 100, 300, 300) dialPlate:@"plate" centerCircle:@"clock_center_i6"  hourHand:@"hour_hand_i6" otherCityHour:@"second_hand_i6"];
     [self.view addSubview:clock2];
     clock2.center = CGPointMake(0.5*self.view.frame.size.width, 0.5*self.view.frame.size.height);
     
     self.clockView2 = clock2;
     self.clockView2.hidden = YES;
+    
+    [self scale:2];
     
 }
 
@@ -59,19 +61,22 @@
 }
 
 
-- (IBAction)start:(UISwitch *)sender {
-    if (sender.on) {
-        [self.clockView resumeClock];
-    } else {
-        [self.clockView pauseClock];
-    }
-}
 - (IBAction)slier:(UISlider *)sender {
     [self scale:sender.value];
     
 }
 - (IBAction)seg:(UISegmentedControl *)sender {
-    self.clockView.secondHandMoveStyle = sender.selectedSegmentIndex;
+    if (sender.selectedSegmentIndex == 0) {
+        [self.clockView pauseClock];
+    } else {
+        [self.clockView resumeClock];
+        if (sender.selectedSegmentIndex == 1) {
+            self.clockView.secondHandMoveStyle = AXSecondHandMoveStyleSlide;
+        } else if (sender.selectedSegmentIndex == 2) {
+            self.clockView.secondHandMoveStyle = AXSecondHandMoveStyleStep;
+        }
+    }
+    
 }
 
 - (IBAction)timeZone:(UISlider *)sender {

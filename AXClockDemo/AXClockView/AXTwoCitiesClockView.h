@@ -35,13 +35,13 @@ typedef NS_ENUM(NSUInteger, AXHandOriginLocation) {
  创建一个模拟时钟
  
  @param frame        frame
- @param dialPalte    表盘图片
+ @param dialPlate    表盘图片
  @param centerCircle 中心圈
  @param hourHand      时针
  @param otherCityHour 另一个城市的时针
  @return 时钟实例
  */
-+ (instancetype)clockWithFrame:(CGRect)frame dialPalte:(NSString *)dialPalte centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand otherCityHour:(NSString *)otherCityHour;
++ (instancetype)clockWithFrame:(CGRect)frame dialPlate:(NSString *)dialPlate centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand otherCityHour:(NSString *)otherCityHour;
 
 
 @end

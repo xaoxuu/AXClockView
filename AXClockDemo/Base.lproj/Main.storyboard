@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,30 +18,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPn-NQ-XX1">
-                                <rect key="frame" x="59" y="20" width="51" height="31"/>
-                                <connections>
-                                    <action selector="start:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hyb-sM-Hpg"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="启动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaA-fs-amc">
-                                <rect key="frame" x="16" y="25" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="33.5" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.29999999999999999" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="W6w-S8-PUq">
-                                <rect key="frame" x="57" y="56" width="304" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.29999999999999999" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="W6w-S8-PUq">
+                                <rect key="frame" x="51" y="64" width="255" height="31"/>
                                 <connections>
                                     <action selector="slier:" destination="BYZ-38-t0r" eventType="valueChanged" id="gLw-9G-pmC"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-85-jNs">
-                                <rect key="frame" x="276" y="20" width="83" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-85-jNs">
+                                <rect key="frame" x="98" y="28" width="125" height="29"/>
                                 <segments>
+                                    <segment title="暂停"/>
                                     <segment title="平滑"/>
                                     <segment title="跳变"/>
                                 </segments>
@@ -50,8 +44,26 @@
                                     <action selector="seg:" destination="BYZ-38-t0r" eventType="valueChanged" id="tx7-ea-1pM"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-24" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-4C-H53">
+                                <rect key="frame" x="51" y="102" width="255" height="31"/>
+                                <connections>
+                                    <action selector="timeZone:" destination="BYZ-38-t0r" eventType="valueChanged" id="wJx-C9-9Ak"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时差" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6C-WZ-j8A">
+                                <rect key="frame" x="16" y="109" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缩放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AH7-SP-4Gi">
+                                <rect key="frame" x="16" y="71" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="npK-dH-d16">
-                                <rect key="frame" x="119" y="20" width="137" height="29"/>
+                                <rect key="frame" x="91.5" y="520" width="137" height="29"/>
                                 <segments>
                                     <segment title="本地时钟"/>
                                     <segment title="两地时钟"/>
@@ -60,45 +72,25 @@
                                     <action selector="mode:" destination="BYZ-38-t0r" eventType="valueChanged" id="d5v-wT-STy"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-24" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-4C-H53">
-                                <rect key="frame" x="74" y="94" width="287" height="31"/>
-                                <connections>
-                                    <action selector="timeZone:" destination="BYZ-38-t0r" eventType="valueChanged" id="wJx-C9-9Ak"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时差：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6C-WZ-j8A">
-                                <rect key="frame" x="16" y="98.5" width="52" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缩放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AH7-SP-4Gi">
-                                <rect key="frame" x="16" y="60.5" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="m6C-WZ-j8A" firstAttribute="centerY" secondItem="ZOC-4C-H53" secondAttribute="centerY" id="6Ww-Bm-6ZS"/>
                             <constraint firstItem="AH7-SP-4Gi" firstAttribute="centerY" secondItem="W6w-S8-PUq" secondAttribute="centerY" id="77n-gp-9Ia"/>
-                            <constraint firstItem="RaA-fs-amc" firstAttribute="centerY" secondItem="XPn-NQ-XX1" secondAttribute="centerY" id="8MN-my-a56"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="npK-dH-d16" secondAttribute="bottom" constant="20" id="DcY-PQ-cn4"/>
+                            <constraint firstItem="RaA-fs-amc" firstAttribute="centerY" secondItem="3cz-85-jNs" secondAttribute="centerY" id="EK2-lg-58S"/>
                             <constraint firstItem="m6C-WZ-j8A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Enb-qZ-KpP"/>
                             <constraint firstItem="RaA-fs-amc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FKr-Jb-Mic"/>
                             <constraint firstItem="W6w-S8-PUq" firstAttribute="leading" secondItem="AH7-SP-4Gi" secondAttribute="trailing" constant="8" id="G8J-1c-aSW"/>
-                            <constraint firstItem="XPn-NQ-XX1" firstAttribute="leading" secondItem="RaA-fs-amc" secondAttribute="trailing" constant="8" id="Lla-gW-VF2"/>
-                            <constraint firstItem="npK-dH-d16" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NId-BX-MpF"/>
+                            <constraint firstItem="npK-dH-d16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQc-Ta-wK9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZOC-4C-H53" secondAttribute="trailing" id="PyR-fS-A8Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W6w-S8-PUq" secondAttribute="trailing" id="Uor-sQ-Tbd"/>
-                            <constraint firstItem="3cz-85-jNs" firstAttribute="top" secondItem="npK-dH-d16" secondAttribute="top" id="gEV-fr-VNO"/>
+                            <constraint firstItem="W6w-S8-PUq" firstAttribute="top" secondItem="3cz-85-jNs" secondAttribute="bottom" constant="8" id="bax-MY-bU7"/>
                             <constraint firstItem="ZOC-4C-H53" firstAttribute="leading" secondItem="m6C-WZ-j8A" secondAttribute="trailing" constant="8" id="gRw-Mm-Dse"/>
                             <constraint firstItem="ZOC-4C-H53" firstAttribute="top" secondItem="W6w-S8-PUq" secondAttribute="bottom" constant="8" id="hee-6D-OY3"/>
-                            <constraint firstItem="3cz-85-jNs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kHe-Fg-xKB"/>
-                            <constraint firstItem="W6w-S8-PUq" firstAttribute="top" secondItem="npK-dH-d16" secondAttribute="bottom" constant="8" id="oTc-py-p4b"/>
-                            <constraint firstItem="npK-dH-d16" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhi-T0-b7r"/>
+                            <constraint firstItem="3cz-85-jNs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQi-8q-hlH"/>
+                            <constraint firstItem="3cz-85-jNs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="u2N-n0-56J"/>
                             <constraint firstItem="AH7-SP-4Gi" firstAttribute="leading" secondItem="RaA-fs-amc" secondAttribute="leading" id="uAJ-dm-ehy"/>
-                            <constraint firstItem="XPn-NQ-XX1" firstAttribute="top" secondItem="npK-dH-d16" secondAttribute="top" id="xBi-Fm-zPM"/>
                         </constraints>
                     </view>
                     <connections>

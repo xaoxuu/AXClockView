@@ -17,6 +17,8 @@
  动画
  */
 @property (strong, nonatomic) CABasicAnimation *animation;
+// @xaoxuu: pause date
+@property (strong, nonatomic) NSDate *pauseDate;
 
 @end
 
@@ -76,16 +78,22 @@
 
 - (void)update{
     if (_canUpdateHand){
-        [self clockUpdateHandToDate:[NSDate date]];
+        if (self.pauseDate) {
+            [self clockUpdateHandToDate:self.pauseDate];
+        } else {
+            [self clockUpdateHandToDate:[NSDate date]];
+        }
     }
 }
 
 - (void)resumeClock{
-    [self.timer setPaused:NO];
+//    [self.timer setPaused:NO];
+    self.pauseDate = nil;
 }
 
 - (void)pauseClock{
-    [self.timer setPaused:YES];
+//    [self.timer setPaused:YES];
+    self.pauseDate = [NSDate date];
 }
 
 

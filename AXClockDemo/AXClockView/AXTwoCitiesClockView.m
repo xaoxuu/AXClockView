@@ -10,13 +10,13 @@
 
 @implementation AXTwoCitiesClockView
 
-+ (instancetype)clockWithFrame:(CGRect)frame dialPalte:(NSString *)dialPalte centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand otherCityHour:(NSString *)otherCityHour{
-    return [[self alloc] initWithFrame:frame dialPalte:dialPalte centerCircle:centerCircle hourHand:hourHand otherCityHour:otherCityHour];
++ (instancetype)clockWithFrame:(CGRect)frame dialPlate:(NSString *)dialPlate centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand otherCityHour:(NSString *)otherCityHour{
+    return [[self alloc] initWithFrame:frame dialPlate:dialPlate centerCircle:centerCircle hourHand:hourHand otherCityHour:otherCityHour];
 }
-- (instancetype)initWithFrame:(CGRect)frame dialPalte:(NSString *)dialPalte centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand otherCityHour:(NSString *)otherCityHour{
+- (instancetype)initWithFrame:(CGRect)frame dialPlate:(NSString *)dialPlate centerCircle:(NSString *)centerCircle hourHand:(NSString *)hourHand otherCityHour:(NSString *)otherCityHour{
     if (self = [self initWithFrame:frame]) {
         
-        self.img_dialPlate = [[UIImageView alloc] initWithImage:[UIImage imageNamed:dialPalte]];
+        self.img_dialPlate = [[UIImageView alloc] initWithImage:[UIImage imageNamed:dialPlate]];
         self.img_hourHand = [[UIImageView alloc] initWithImage:[UIImage imageNamed:hourHand]];
         self.img_otherCityHourHand = [[UIImageView alloc] initWithImage:[UIImage imageNamed:otherCityHour]];
         self.img_centerCircle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:centerCircle]];
